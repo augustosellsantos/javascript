@@ -6,8 +6,8 @@ const idade = 31;
 const peso = 80;
 const alturaEmM = 1.87;
 /* Poderia ter alterado essas duas próximas variaveis para let como aprendido na aula em video, mas como desse jeito também funcinou deixei assim */
-const aoQuadrado = alturaEmM * alturaEmM; 
-const imc = peso / aoQuadrado;
+const alturaAoQuadrado = alturaEmM * alturaEmM; 
+const imc = peso / alturaAoQuadrado;
 let anoNasc;
 anoNasc = 2022 - idade;
 

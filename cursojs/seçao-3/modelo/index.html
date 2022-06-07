@@ -9,21 +9,50 @@
 </head>
 <body>
     <section class="container">
-        <h1 id="titulo">Aplicando JavaScript</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cumque corrupti nostrum voluptates suscipit eaque, hic assumenda optio aliquam. Maxime dolor, libero quod sit eos praesentium? Deleniti, non illum. Nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores temporibus esse omnis hic atque laborum fugiat corporis harum quaerat, veniam, ad, provident quam libero perferendis nulla? Voluptate, quas iure.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cumque corrupti nostrum voluptates suscipit eaque, hic assumenda optio aliquam. Maxime dolor, libero quod sit eos praesentium? Deleniti, non illum. Nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores temporibus esse omnis hic atque laborum fugiat corporis harum quaerat, veniam, ad, provident quam libero perferendis nulla? Voluptate, quas iure.</p>
-
-        <form action="">
-            <label for="input-teste-1">Label teste #1</label>
-            <input type="text" id="input-teste-1">
-            <label for="input-teste-2">Label teste #2</label>
-            <input type="password" id="input-teste-2">
-            <label for="input-teste-3">Label teste #3</label>
-            <input type="email" id="input-teste-3">
-            <label for="input-teste-4">Label teste #4</label>
-            <input type="number" id="input-teste-4">
-            <button>Enviar</button>
+        <h1 id="titulo">Tabela de IMC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">IMC</th>
+                    <th scope="col">Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Menos do que 18,5</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>Entre 18,5 e 24,9</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>Entre 25 e 29,9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>Entre 30 e 34,9</td>
+                    <td>Obsidade grau 1</td>
+                </tr>
+                <tr>
+                    <td>Entre 35 e 39,9</td>
+                    <td>Obsidade grau 2</td>
+                </tr>
+                <tr>
+                    <td>Mais do que 40</td>
+                    <td>Obsidade grau 3</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Calcule seu IMC</h2>
+        <form action="" class="calculo" method="get">
+            <label for="Peso">Peso:</label>
+            <input type="text" id="peso">            
+            <label for="Altura">Altura:</label>
+            <input type="text" id="altura">
+            <button>Calcular</button>
         </form>
+        <aside id="resultado"></aside>
     </section>
     <footer>
         <p>Criado por <a href="https://github.com/augustosellsantos" target="_blank" rel="external">Augusto Sell dos Santos</a> em <a href="https://www.udemy.com" target="_blank" rel="external">Udemy</a></p>

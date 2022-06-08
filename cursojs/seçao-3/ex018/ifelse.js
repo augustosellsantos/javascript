@@ -13,9 +13,9 @@ const comCarro = true;
 const semCarro = false;
 
 if (semCarro) {
-    console.log('Vou sair de casa!')
+    console.log('Vou sair de casa!');
 } else {
-    console.log('Não vou sair de casa!')
+    console.log('Não vou sair de casa!');
 }
 
 const numb = 17;
@@ -29,5 +29,5 @@ if (numb >= 0 && numb <= 7) {
 } else if (numb >= 16 && numb <= 19) {
     console.log('O número esta entre 16 e 19');
 } else {
-    console.log('O número não está entre 0 e 19.')
+    console.log('O número não está entre 0 e 19.');
 }

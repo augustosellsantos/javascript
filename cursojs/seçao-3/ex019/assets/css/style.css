@@ -10,6 +10,7 @@
     --cor3: #BF6A39;
     --cor4: #592918;
     --cor5: #400505;
+    --cor-5: #9b1f1fb6;
 
     --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --font0: 'Play', sans-serif;
@@ -93,7 +94,7 @@ form button:hover {
     border-radius: 20px;
 }
 .invalido {
-    background-color: var(--cor5);
+    background-color: var(--cor-5);
     color: var(--cor);
     padding: 10px 15px;
 }

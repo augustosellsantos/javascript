@@ -86,14 +86,16 @@ form button {
 form button:hover {
     background-color: var(--cor4);
 }
-#resultado {
+.paragrafo-resposta, .invalido {
     background-color: var(--cor1);
     color: var(--cor);
-    height: 35px;
-    padding: 5px 15px 5px 15px;
+    padding: 10px 15px;
     border-radius: 20px;
-    width: 100%;
-    margin-bottom: 5px;
+}
+.invalido {
+    background-color: var(--cor5);
+    color: var(--cor);
+    padding: 10px 15px;
 }
 footer {
     background-color: var(--cor3);

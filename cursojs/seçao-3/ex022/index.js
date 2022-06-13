@@ -1,8 +1,8 @@
 const data = new Date();
 const diaSemana = data.getDay();
-const nomeDiaSemana = getNomediasemana(diaSemana);
+const nomeDiaSemana = getNomeDiaSemana(diaSemana);
 
-function getNomediasemana(diaSemana) {
+function getNomeDiaSemana(diaSemana) {
     let nomeDiaSemana;
 
     switch (diaSemana) {

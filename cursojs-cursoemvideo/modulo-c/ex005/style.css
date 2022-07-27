@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+:root {
+    --corA: #ffffff;
+    --corB: #000000;
+    --cor1: #0477BF;
+    --cor2: #05AFF2;
+    --cor3: #05C7F2;
+    --cor4: #BF300F;
+    --cor5: #8C2323;
+
+    --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font0: ;
+    --font1: ;
+
+    --boxshadow: ;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--cor3);
+    color: var(--corA);
+    font-family: var(--font);
+}

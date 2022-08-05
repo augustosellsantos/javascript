@@ -12,13 +12,13 @@
         <h1 id="principal">Verificar sua Idade</h1>
     </header>
     <section>
-        <div>
-            <p>Ano de Nascimento: <input type="number" name="ano" id="ano"></p>
-            <p>Sexo: <input type="radio" name="Masculino" id="masculino" checked>
+        <div id="conteudo">
+            <p>Ano de Nascimento: <input type="number" name="ano" id="ano" min="0"></p>
+            <p>Sexo: <input type="radio" name="sexo" id="masculino" checked>
                 <label for="masculino">Masculino</label>
-                <input type="radio" name="Feminino" id="feminino">
+                <input type="radio" name="sexo" id="feminino">
                 <label for="feminino">Feminino</label></p>
-            <p><input type="button" value="Verificar"></p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
         </div>
         <div id="resultado">
             Preencha os dados acima para ver o resultado!

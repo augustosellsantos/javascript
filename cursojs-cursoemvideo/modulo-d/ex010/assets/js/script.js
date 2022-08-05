@@ -1,4 +1,4 @@
-function verificar(){
+function verificar() {
     const idade = document.querySelector('input#idade');
     const resultado = document.querySelector('div#resultado');
     let anos = (idade.value);

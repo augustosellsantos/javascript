@@ -3,12 +3,14 @@ function escopo(){
     const foto = document.querySelector('#foto');
     const dizer = document.querySelector('div#dizer');
     const data = new Date();
-    function zeroAEsquerda (num) {
+    const hora = data.getHours();
+    /*function zeroAEsquerda (num) {
         return num >= 10 ? num : `0${num}`;
     }
     function hora(data) {
         return `Agora são ${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())} horas.`;
-    }
+    }*/
+    mensagem.innerHTML = `Agora são ${hora} horas.`;//hora(data);
     if (hora >= 0 && hora < 12) {
         foto.src = 'assets/img/manha.png';
         dizer.innerHTML = 'Bom dia!'
@@ -22,6 +24,5 @@ function escopo(){
         dizer.innerHTML = 'Boa noite!'
         document.body.style.background = '#302842';
     }
-    mensagem.innerHTML = hora(data);
 }
 escopo();

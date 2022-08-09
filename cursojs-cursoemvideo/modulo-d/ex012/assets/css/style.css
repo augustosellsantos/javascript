@@ -41,6 +41,9 @@ section {
     box-shadow: var(--boxshadow);
     font-size: 1.2em;
 }
+#falar {
+    text-align: center;
+}
 p {
     padding: 10px 0px 10px 0px;
 }

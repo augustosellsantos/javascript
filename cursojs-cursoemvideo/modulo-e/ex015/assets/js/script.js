@@ -30,9 +30,21 @@ function escopo(){
         }
     }
     contar.addEventListener('submit', eventoContar);
-    function resultado () {
+    function criaP () {
+        const p = document.createElement('p');
+        return p;
+    }
+    function resultado (solucao, valido) {
         const resultado = document.querySelector('#resultado');
         resultado.innerHTML = ``;
+        const p = criaP();
+        if (valido) {
+            p.classList.add('solucao');
+        } else {
+            p.classList.add('invalido');
+        }
+        p.innerHTML = solucao;
+        resultado.appendChild(p);
     }
 }
 escopo();

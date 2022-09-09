@@ -1,11 +1,12 @@
 function escopo(){
     const contar = document.querySelector('.contar');
+    const contagem = [];
 
     function eventoContar (event) {
         event.preventDefault();
-        const inputInicio = contar.querySelector('#inicio');
-        const inputFinal = contar.querySelector('#final');
-        const inputPasso = contar.querySelector('#passo');
+        const inputInicio = contar.querySelector('input#inicio');
+        const inputFinal = contar.querySelector('input#final');
+        const inputPasso = contar.querySelector('input#passo');
         const inicio = Number(inputInicio.value);
         const final = Number(inputFinal.value);
         const passo = Number(inputPasso.value);

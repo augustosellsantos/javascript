@@ -31,7 +31,7 @@
         lista.appendChild(li);
         clearTarefa();
         createButtonDelete(li);
-        salveTarefas();
+        salvarTarefas();
     }
     adicionaTarefas.addEventListener('click', function() {
         if (!novaTarefa.value) return;
@@ -41,10 +41,10 @@
         const element = event.target;
         if (element.classList.contains('apagar')) {
             element.parentElement.remove();
-            salveTarefas();
+            salvarTarefas();
         }
     });
-    function salveTarefas() {
+    function salvarTarefas() {
         const liTarefas = lista.querySelectorAll('li');
         const listaDeTarefas = [];
 
@@ -57,8 +57,8 @@
         localStorage.setItem('lista', listaJSON);
     }
     function adicionaTarefasSalvas() {
-        const tarefas = localStorage.getItem('tarefas');
-        const listaDeTarefas = JSON.parse(tarefas);
+        const lista = localStorage.getItem('lista');
+        const listaDeTarefas = JSON.parse(lista);
 
         for (let listas of listaDeTarefas) {
             criaTarefa(listas);

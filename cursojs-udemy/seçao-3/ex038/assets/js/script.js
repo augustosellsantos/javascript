@@ -1,10 +1,67 @@
-function escopo () {
-    const novaTarefa = document.querySelector('#nova-tarefa')
-    const adicionaTarefas = document.querySelector('.adiciona-tarefas')
-    const lista = document.querySelector('.lista')
 
-    adicionaTarefas.addEventListener('click', function(event) {
-        if (!novaTarefa.value) return;
+    const novaTarefa = document.querySelector('#nova-tarefa');
+    const adicionaTarefas = document.querySelector('.adiciona-tarefas');
+    const lista = document.querySelector('.lista');
+
+    function criaLi() {
+        const li = document.createElement('li');
+        return li;
+    }
+    novaTarefa.addEventListener('keypress', function(event) {
+        if (event.keyCode === 13) {
+            if (!novaTarefa.value) return;
+            criaTarefa(novaTarefa.value);
+        }
     });
-}
-escopo();
+    function clearTarefa() {
+        novaTarefa.value = '';
+        novaTarefa.focus();
+    }
+    function createButtonDelete(li) {
+        const buttonDelete = document.createElement('button');
+        buttonDelete.innerText = 'Apagar';
+        buttonDelete.setAttribute('class', 'apagar');
+        buttonDelete.setAttribute('title', 'Apaga tarefa');
+        li.innerText += ' ';
+        li.appendChild(buttonDelete);
+    }
+    function criaTarefa(textoTarefas) {
+        const li = criaLi();
+        li.innerText = textoTarefas;
+        lista.appendChild(li);
+        clearTarefa();
+        createButtonDelete(li);
+        salveTarefas();
+    }
+    adicionaTarefas.addEventListener('click', function() {
+        if (!novaTarefa.value) return;
+        criaTarefa(novaTarefa.value);
+    });
+    document.addEventListener('click', function(event) {
+        const element = event.target;
+        if (element.classList.contains('apagar')) {
+            element.parentElement.remove();
+            salveTarefas();
+        }
+    });
+    function salveTarefas() {
+        const liTarefas = lista.querySelectorAll('li');
+        const listaDeTarefas = [];
+
+        for (let listas of liTarefas) {
+            let tarefaTexto = listas.innerText;
+            tarefaTexto = tarefaTexto.replace('Apagar', '').trim();
+            listaDeTarefas.push(tarefaTexto);
+        }
+        const listaJSON = JSON.stringify(listaDeTarefas);
+        localStorage.setItem('lista', listaJSON);
+    }
+    function adicionaTarefasSalvas() {
+        const tarefas = localStorage.getItem('tarefas');
+        const listaDeTarefas = JSON.parse(tarefas);
+
+        for (let listas of listaDeTarefas) {
+            criaTarefa(listas);
+        }
+    }
+    adicionaTarefasSalvas();
